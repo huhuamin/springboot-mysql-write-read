@@ -248,7 +248,7 @@ public abstract class AbstractRoutingDataSource extends AbstractDataSource imple
 
 ### 使用[start.spring.io](https://start.spring.io/) 脚手架快速创建框架	
 
-![image-20200510073630903](./imgs/image-20200510073630903.png)
+![image-20200510073630903](https://github.com/huhuamin/springboot-mysql-write-read/blob/master/imgs/image-20200510073630903.png?raw=true)
 
 ### 使用IDEA CE[社区版](https://www.jetbrains.com/idea/download)  打开项目
 
@@ -516,20 +516,20 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ### 如果没在更新上没有加注解,会出现--read-only option so it cannot execute this statement，走的是只读库
 
-![image-20200510192710376](./imgs/image-20200510192710376.png)
+![image-20200510192710376](https://github.com/huhuamin/springboot-mysql-write-read/blob/master/imgs/image-20200510192710376.png?raw=true)
 
 
 
 ### 在更新或者修改或者删除操作上加上@DynamicDataSources或者强制指定@DynamicDataSources(value = DynamicDruidConfiguration.DEFAULT_MASTER)，正常写操作
 ### 如果再查询上@DynamicDataSources(value = DynamicDruidConfiguration.DEFAULT_MASTER)，那么读强制走主库去读
 
-![image-20200510192859950](./imgs/image-20200510192859950.png)
+![image-20200510192859950](https://github.com/huhuamin/springboot-mysql-write-read/blob/master/imgs/image-20200510192859950.png?raw=true)
 
 
 
 ### 查看修改后的返回结果,从下面截图能看到 dataSource-1, dataSource-2是不同的数据源
 
-![image-20200510193140275](./imgs/image-20200510193140275.png)
+![image-20200510193140275](https://github.com/huhuamin/springboot-mysql-write-read/blob/master/imgs/image-20200510193140275.png?raw=true)
 
 ```json
 {
