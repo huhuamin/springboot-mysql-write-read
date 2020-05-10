@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      hhm-master: # 主数据源
+        driverClassName: com.mysql.cj.jdbc.Driver
+        username: root   #账号
+        password: 123456 #密码
+        url: jdbc:mysql://127.0.0.1:3307/metadata?useUnicode=true&characterEncoding=UTF-8&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+
+      hhm-replic: # 从数据源
+        driverClassName: com.mysql.cj.jdbc.Driver
+        username: view # 只读账号
+        password: 123456 #密码
+        url: jdbc:mysql://127.0.0.1:3308/metadata?useUnicode=true&characterEncoding=UTF-8&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+
+
